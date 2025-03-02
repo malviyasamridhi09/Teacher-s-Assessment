@@ -20,6 +20,4 @@ Booth's Algorithm is an efficient method for performing signed binary multiplica
 ## Example
 Given two numbers as input, the program calculates their product using Booth's Algorithm and displays the result in both binary and decimal formats.
 
-## License & Contact
-This project is licensed under the MIT License. For any inquiries or contributions, feel free to reach out via email.
 
