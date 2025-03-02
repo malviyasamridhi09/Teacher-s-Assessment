@@ -1,23 +1,32 @@
-# Booth's Algorithm in Java
+# Booth's Algorithm in C++
 
-## Introduction
-Booth's Algorithm is an efficient method for performing signed binary multiplication using two's complement notation. It reduces the number of required arithmetic operations by encoding multiplication as a series of shifts and additions/subtractions.
+## Overview
+Booth's Algorithm is an efficient method for multiplying **signed integers** in binary using **Two’s Complement**. It eliminates the need for multiple addition or subtraction operations, making it useful for **low-level arithmetic computations**.
 
 ## Features
-- Implements Booth's Algorithm for signed multiplication
-- Handles both positive and negative numbers
-- Optimized for two's complement multiplication
+- Supports **positive and negative numbers**.
+- Uses **Two’s Complement** for signed number representation.
+- Performs **Arithmetic Right Shift** for correct bit manipulation.
+- Produces **accurate results** for integer multiplication.
 
-## Prerequisites
-- Java Development Kit (JDK)
-- Java IDE or command-line terminal
+## How It Works
+1. Convert the multiplicand and multiplier into binary (Two’s Complement if negative).
+2. Initialize registers (**A, Q, Q-1**) and the iteration counter.
+3. Perform the following for `n` cycles:
+   - If `Q0 Q-1` is `10`, subtract M from A.
+   - If `Q0 Q-1` is `01`, add M to A.
+   - Perform **Arithmetic Right Shift** on (A, Q, Q-1).
+4. After `n` cycles, the result is stored in **(A, Q)** and converted to decimal.
 
-## Installation & Usage
-1. Clone the repository and navigate to the project directory.
-2. Compile and run the Java program.
-3. Enter the multiplicand and multiplier when prompted.
+## Applications
+- **Computer Architecture**: Used in ALUs for multiplication.
+- **Embedded Systems**: Efficient multiplication in low-power devices.
+- **Digital Signal Processing (DSP)**: High-speed calculations in signal processing.
 
-## Example
-Given two numbers as input, the program calculates their product using Booth's Algorithm and displays the result in both binary and decimal formats.
+## Usage
+- Enter the **multiplicand and multiplier** as input.
+- The program outputs the **correct product**.
 
+---
+🚀 **Efficient and Accurate Signed Multiplication using Booth's Algorithm!**
 
